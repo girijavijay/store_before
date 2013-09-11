@@ -1,0 +1,24 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1378806854.252922:@value{	I"length:EFiI"digest;
+F"%3fd922a14950194812241ad4dfb2087aI"source;
+FI"(function() {
+  $(function() {
+    $(document).on('focus', '.datepicker:not(.hasDatepicker)', function() {
+      return $(this).datepicker({
+        dateFormat: 'yy-mm-dd'
+      });
+    });
+    $('.clear_filters_btn').click(function() {
+      return window.location.search = '';
+    });
+    $('.dropdown_button').popover();
+    return $('#q_search').submit(function() {
+      return $(this).find(':input').filter(function() {
+        return this.value === '';
+      }).prop('disabled', true);
+    });
+  });
+
+}).call(this);
+;
+FI"_version;
+F"%a68e44235839f5e5fd152ee798cdeed9

@@ -1,0 +1,28 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1378806854.203736:@value{	I"length:EFiŸI"digest;
+F"%40a284f93768800191dff31166190349I"source;
+FI"Ÿ(function() {
+  jQuery(function($) {
+    $(document).delegate("#batch_actions_selector li a", "click.rails", function() {
+      $("#batch_action").val($(this).attr("data-action"));
+      return $("#collection_selection").submit();
+    });
+    if ($("#batch_actions_selector").length && $(":checkbox.toggle_all").length) {
+      if ($(".paginated_collection table.index_table").length) {
+        $(".paginated_collection table.index_table").tableCheckboxToggler();
+      } else {
+        $(".paginated_collection").checkboxToggler();
+      }
+      return $(".paginated_collection").find(":checkbox").bind("change", function() {
+        if ($(".paginated_collection").find(":checkbox").filter(":checked").length > 0) {
+          return $("#batch_actions_selector").aaDropdownMenu("enable");
+        } else {
+          return $("#batch_actions_selector").aaDropdownMenu("disable");
+        }
+      });
+    }
+  });
+
+}).call(this);
+;
+FI"_version;
+F"%4e9880b5af878ba809229b8356444deb
